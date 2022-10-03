@@ -1,0 +1,287 @@
+.content {
+    background-color: $primary-bg-color;
+    line-height: $line-height;
+}
+
+.menu-container {
+    @include container;
+    padding: 40px 0;
+    justify-content: space-between;
+
+    @include pad {
+        justify-content: space-evenly;
+    }
+
+    @include mobile{
+        flex-direction: column;
+    }
+}
+
+// 左側選單
+.menu_aside {
+    width: 20%;
+    padding: 0 $grid-width;
+
+    h2 {
+        font-size: $fz-m;
+        margin-bottom: 15px;
+
+        .leaf {
+            font-size: 26px;
+            margin-right: 5px;
+        }
+    }
+
+    &-option {
+        li {
+            border-bottom: 1px solid $text-color;
+        }
+
+        a {
+            padding: 7px;
+
+            &:hover {
+                color: #fff;
+                background-color: $secondary-bg-color;
+            }
+        }
+    }
+}
+
+.menu_aside {
+    @include pad {
+        width: 28%;
+        padding: 0;
+
+        h2 {
+            font-size: $fz-s;
+        }
+    }
+
+    @include mobile {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+// 右側介紹
+.menu-info {
+    width: 70%;
+    padding-right: $grid-width;
+
+    @include pad {
+        width: 65%;
+        padding: 0;
+    }
+
+    @include mobile{
+        width: 100%;
+    }
+}
+
+// topbar
+.menu_topbar {
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+
+// topbar搜尋欄
+.searching {
+    display: inline-block;
+    width: 65%;
+    position: relative;
+
+    @include pad {
+        width: 60%;
+    }
+
+    @include mobile{
+        width: 80%;
+    }
+
+    &_zone {
+        width: 92%;
+        height: 26px;
+        border: 2px solid $text-color;
+        outline: none;
+
+        @include pad {
+            width: 90%;
+        }
+
+        @include mobile{
+            width: 90%;
+        }
+    }
+
+    &_icon {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-color: $secondary-bg-color;
+        cursor: pointer;
+        position: absolute;
+
+        &-glass {
+            color: #fff;
+            font-size: 19px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+// topbar結帳
+.checkout {
+    width: 20%;
+    justify-content: flex-end;
+
+    @include pad {
+        width: 30%;
+    }
+
+    @include mobile{
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    &-go {
+        line-height: 32px;
+        border-right: 1px solid $text-color;
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+
+    &_icon {
+        position: relative;
+
+        &-cart {
+            display: inline-block;
+            font-size: 27px;
+
+            &:hover~.checkout_icon-item {
+                background-color: red;
+            }
+        }
+
+        &-item {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            color: #efe9e7;
+            background-color: #ff5e45;
+            font-size: $fz-s -(6);
+            text-align: center;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+    }
+}
+
+// 菜單卡片
+.menu {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: $grid-width+10 0;
+    @include pad{
+        justify-content: space-evenly;
+    }
+}
+
+.menu-card {
+    width: 30%;
+    box-shadow: 3px 3px 4px rgba($color: #000, $alpha: 0.16);
+    text-align: center;
+    position: relative;
+    @include pad{
+        width: 48%;
+    }
+
+    @include mobile{
+        width: 80%;
+    }
+
+    &--pic {
+        display: block;
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    &--heart{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: $fz-m+3;
+        color: #fff;
+
+        &:hover{
+            font-weight: bold;
+            color: red;
+        }
+    }
+
+    &--title {
+        font-size: $fz-m;
+        margin-top: 10px;
+    }
+
+    &--Eng {
+        font-size: $fz-s -(6);
+        margin-bottom: 10px;
+    }
+
+    &--line {
+        width: 91px;
+        height: 1px;
+        background-color: $text-color;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--price {
+        font-size: $fz-m;
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+    &--btn{
+        width: 90%;
+        color: #ff5e45;
+        border: 2px solid #ff5e45;
+        border-radius: 3px;
+        padding: 2px 0;
+        margin:0 auto 10px auto;
+
+        &:hover{
+            background-color: #ff5e45;
+            color: #fff;
+        }
+    }
+}
+
+.menu-card-perfect{
+    margin-top: 30px;
+}
+
+.menu-card-bro{
+    @include pad{
+        margin-top: 30px;
+    }
+}
+
+.menu-card-Sausage{
+    @include mobile{
+        margin-top: 30px;
+    }
+}
+

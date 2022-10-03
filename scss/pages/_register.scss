@@ -1,0 +1,132 @@
+.content {
+    background-color: $primary-bg-color;
+    line-height: $line-height;
+}
+
+.register-container {
+    @include container;
+    padding: 40px 0;
+
+    h2 {
+        font-size: $fz-l*2;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .enjoy {
+        font-size: $fz-s;
+        font-weight: initial;
+        margin-bottom: 20px;
+    }
+}
+
+
+.register {
+    width: 55%;
+    margin: 0 auto;
+    border-top: 4px solid #ff5e45;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: $grid-width;
+
+    h3 {
+        font-size: $fz-s;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    @include pad {
+        width: 70%;
+    }
+
+    @include mobile {
+        width: 70%;
+    }
+}
+
+// 左側告知欄
+.register_content {
+    justify-content: space-between;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    &-terms {
+        width: 50%;
+
+        @include mobile {
+            width: 100%;
+            border-bottom: 1px solid rgb(185, 184, 184);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// 右側輸入區
+.register_content-form {
+    width: 45%;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    label {
+        display: block;
+        position: relative;
+
+        input {
+            width: 95%;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-indent: 15px;
+            padding: 5px;
+        }
+
+        i {
+            font-size: 12px;
+            color: rgba(61, 17, 0, 0.5);
+            position: absolute;
+            left: 2%;
+            top: 60%;
+        }
+    }
+}
+
+.bottom-password {
+    margin-top: 5px;
+
+    .lock {
+        top: 30%;
+    }
+}
+
+.password {
+    margin-top: 20px;
+}
+
+.form-account {
+    font-size: 14px;
+    color: #ff5e45;
+
+    &:hover {
+        color: red;
+    }
+}
+
+.register-btn {
+    margin-top: 15%;
+    justify-content: flex-end;
+
+    a {
+        @include btn-style;
+        background-color: #f56c23;
+
+        &:hover {
+            background-color: #3d1101;
+        }
+
+    }
+}
